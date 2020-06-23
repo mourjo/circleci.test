@@ -1,4 +1,5 @@
 # circleci.test
+[![CircleCI Build](https://circleci.com/gh/mourjo/circleci.test.svg?style=svg)](https://circleci.com/gh/mourjo/circleci.test)
 
 A Clojure test-runner compatible with tests written using `clojure.test`.
 
