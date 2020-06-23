@@ -6,7 +6,12 @@ Keep your existing `deftest`s, but gain flexibility around how you run them.
 
 ## Usage
 
-Add `[mourjo/circleci.test "0.4.3"]` to your `:dependencies` under `:dev`.
+Add `[mourjo/circleci.test "0.4.3.0.1.0"]` to your `:dependencies` under `:dev`.
+The version number is split into two parts `<base>.<fork>`, the first being the base
+version from which this fork was created, ie `0.4.3` in
+[circleci/circleci.test](https://github.com/circleci/circleci.test) and the
+version of the fork, which is `0.1.0`. This version `0.4.3.0.1.0` is
+used to deploy to [clojars](https://clojars.org/mourjo/circleci.test).
 
 It's recommended to use this set of Leiningen aliases:
 
