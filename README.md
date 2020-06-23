@@ -99,6 +99,21 @@ There is also a `circleci.test/run-all-tests` function; however please note that
 this only runs tests in namespaces that have already been loaded rather than
 running all tests that exist on disk.
 
+
+### Running tests from the command line
+The same tests as above can be run from the command line by the following:
+```shell
+lein run -m circleci.test my.test.ns/my-test
+```
+
+For running tests in entire namespaces:
+```shell
+lein run -m circleci.test my.test.ns my.other.test.ns
+```
+
+The semantics for running tests from the command line are the same as that of
+[Leiningen](https://github.com/technomancy/leiningen).
+
 ### Global fixtures
 
 In addition to `:once` and `:each` fixtures from `clojure.test`, you can define
