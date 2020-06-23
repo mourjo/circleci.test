@@ -1,7 +1,7 @@
 (load-file "./circleci.test.version")
-(defproject circleci/weasley "0.1.0-SNAPSHOT"
+(defproject mourjo/weasley "0.1.0-SNAPSHOT"
   :dependencies [[org.clojure/clojure "1.10.1"]
-                 [circleci/circleci.test ~circleci-test-version]]
+                 [mourjo/circleci.test ~circleci-test-version]]
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}}
   :main weasley.core

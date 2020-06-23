@@ -1,6 +1,6 @@
-(defproject circleci/circleci.test "0.4.3"
-  :description "clojure.test compatible test-runner"
-  :url "https://github.com/circleci/circleci.test"
+(defproject mourjo/circleci.test "0.4.3"
+  :description "clojure.test compatible test-runner (forked from https://github.com/circleci/circleci.test)"
+  :url "https://github.com/mourjo/circleci.test"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :pedantic? :abort
