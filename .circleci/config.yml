@@ -1,19 +1,19 @@
-version: 2.0
+# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
+version: 2.1
 jobs:
   build:
+    working_directory: ~/cci-ms-runner
     docker:
-      - image: clojure:lein-2.8.1
-    working_directory: ~/circleci.test
+      - image: circleci/clojure:lein-2.9.1
+    environment:
+      JVM_OPTS: -Xmx3200m
     steps:
       - checkout
-
-      - cache-restore:
-          # always restore the latest cache
-          key: v1-jars-
-
-      - run: lein test
-
-      - cache-save:
-          key: v1-jars-{{ checksum "project.clj" }}
+      - restore_cache:
+          key: cci-ms-runner-{{ checksum "project.clj" }}
+      - run: lein deps
+      - save_cache:
           paths:
             - ~/.m2
+          key: cci-ms-runner-{{ checksum "project.clj" }}
+      - run: lein do test, uberjar
