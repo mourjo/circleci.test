@@ -16,4 +16,4 @@ jobs:
           paths:
             - ~/.m2
           key: cci-ms-runner-{{ checksum "project.clj" }}
-      - run: lein do test, uberjar
+      - run: make weasley-test
