@@ -5,6 +5,8 @@ A Clojure test-runner compatible with tests written using `clojure.test`.
 
 Keep your existing `deftest`s, but gain flexibility around how you run them.
 
+[![Clojars Project](https://img.shields.io/clojars/v/mourjo/circleci.test.svg)](https://clojars.org/mourjo/circleci.test)
+
 ## Usage
 
 Add `[mourjo/circleci.test "0.4.3.0.1.0"]` to your `:dependencies` under `:dev`.
